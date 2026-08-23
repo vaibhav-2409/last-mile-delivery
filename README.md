@@ -7,10 +7,13 @@ notified at every step of the delivery journey.
 **Stack:** FastAPI · SQLAlchemy 2.0 · SQLite (dev) / Postgres (prod) · vanilla JS
 client, no build step. One process serves the API and the UI.
 
-```
-Hosted app  : https://last-mile-delivery-production-f275.up.railway.app
-API docs    : https://last-mile-delivery-production-f275.up.railway.app/docs
-```
+## Deliverables
+
+All requested deliverables for this assignment are included in the repository:
+1. **Zip file with complete source code**: [`last-mile-delivery-source.zip`](last-mile-delivery-source.zip) is included in the root of the repository.
+2. **README with setup guide, .env.example, API docs, DB schema, and rate calculation logic explanation**: The setup guide and `.env.example` (located at `backend/.env.example`) explanation are in this README below. The docs are located in the `docs/` folder: [API docs](docs/API.md), [DB schema](docs/DB_SCHEMA.md), and [Rate calculation logic explanation](docs/RATE_LOGIC.md).
+3. **Hosted application URL**: [https://last-mile-delivery-production-f275.up.railway.app](https://last-mile-delivery-production-f275.up.railway.app) (API docs available at [`/docs`](https://last-mile-delivery-production-f275.up.railway.app/docs)).
+4. **System design write-up**: Located at [`docs/SYSTEM_DESIGN.md`](docs/SYSTEM_DESIGN.md) (Covers rate calculation engine, zone detection approach, auto-assignment logic, and failed delivery handling within the 800-word limit).
 
 ---
 
