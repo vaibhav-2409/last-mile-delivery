@@ -8,8 +8,8 @@ notified at every step of the delivery journey.
 client, no build step. One process serves the API and the UI.
 
 ```
-Hosted app  : https://lastmile-delivery-tracker.onrender.com
-API docs    : https://lastmile-delivery-tracker.onrender.com/docs
+Hosted app  : https://last-mile-delivery-production-f275.up.railway.app
+API docs    : https://last-mile-delivery-production-f275.up.railway.app/docs
 ```
 
 ---
