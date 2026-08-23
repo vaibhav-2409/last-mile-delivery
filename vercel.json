@@ -1,15 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/app/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/backend/app/main.py"
-    }
-  ]
+  "_comment": "Vercel is NOT supported for this app. FastAPI serves both the API and static files from a single persistent process which Vercel's serverless runtime does not support. Deploy to Render instead using render.yaml.",
+  "version": 2
 }

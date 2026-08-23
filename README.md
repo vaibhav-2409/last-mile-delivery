@@ -8,8 +8,8 @@ notified at every step of the delivery journey.
 client, no build step. One process serves the API and the UI.
 
 ```
-Hosted app  : https://last-mile-delivery.vercel.app
-API docs    : https://last-mile-delivery.vercel.app/docs
+Hosted app  : https://lastmile-delivery-tracker.onrender.com
+API docs    : https://lastmile-delivery-tracker.onrender.com/docs
 ```
 
 ---
@@ -144,14 +144,18 @@ are live versus simulated.
 
 ## Deployment
 
+> **Note:** This app uses FastAPI to serve both the API and static frontend from a **single persistent process**. Use **Render**, **Railway**, or **Fly.io** — not Vercel/Netlify, which are serverless-only and do not support long-running Python servers with file-system access.
+
 ### Render (recommended — `render.yaml` is included)
 
-1. Push this repository to GitHub.
-2. In Render: **New → Blueprint**, point at the repo. It reads `render.yaml` and
-   provisions a free Postgres instance plus the web service.
-3. Set `JWT_SECRET` and `ADMIN_PASSWORD` in the dashboard (marked
-   `sync: false` so they're never committed).
-4. Deploy. First boot creates the schema and seeds the demo data.
+1. Push this repository to GitHub (already done — see https://github.com/vaibhav-2409/last-mile-delivery).
+2. Go to [https://dashboard.render.com](https://dashboard.render.com) → **New → Blueprint**.
+3. Connect your GitHub account and select the `last-mile-delivery` repo.
+4. Render will read `render.yaml` and automatically provision:
+   - A free **Postgres** database (`lastmile-db`)
+   - A **Web Service** running `uvicorn app.main:app`
+5. In the dashboard, set `ADMIN_PASSWORD` and `PUBLIC_BASE_URL` (your Render URL).
+6. Click **Apply**. First boot creates the schema and seeds the demo data.
 
 Two Render notes worth knowing: pin Python with `runtime.txt` (included —
 otherwise Render may default to a version some wheels don't build on), and free
